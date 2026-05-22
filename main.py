@@ -9,7 +9,7 @@ LOGIN = "danilrozhin"
 def get_login():
     return LOGIN
 
-@app.get("/id/{N})
+@app.get("/id/{N}")
 async def get_user_login(N: int):
     url = f"https://nd.kodaktor.ru/users/{N}"
     async with httpx.AsyncClient() as client:
